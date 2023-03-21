@@ -1,0 +1,38 @@
+<div class="row mb-2 mt-3">
+    <div class="col-md-12">
+        <div class="d-flex justify-content-end"> <a href="#" routerLink="emp-create" class="btn btn-primary">Create New Post</a></div>
+    </div>
+</div>
+<div class="card pt-3 p-3">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Salary</th>
+                        <th width="250px">Action</th>
+                      </tr>
+                </thead>
+                <tbody>
+                      <tr *ngFor="let post of employeeList">
+                        <td>{{ post.id }}</td>
+                        <td>{{ post.firstName }}</td>
+                        <td>{{ post.lastName }}</td>
+                        <td>{{ post.email }}</td>
+                        <td>{{ post.salary }}</td>
+                        <td>
+                          <a href="#" [routerLink]="['emp-edit',post.id ]" class="btn btn-primary btn-sm me-2">Edit</a>
+                          <a href="#" [routerLink]="['emp-view',post.id ]" class="btn btn-primary btn-sm me-2">View</a>
+                          <button type="button" (click)="deleteEmp(post.id)" class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,30 @@
+<div class="container" *ngIf="empEmployee">
+    <h1>View Post</h1>
+  
+    <button (click)="goBack()" class="btn btn-primary">Back</button>
+   
+    <div>
+        <strong>ID:</strong>
+        <p>{{ empEmployee.id }}</p>
+    </div>
+    <div>
+        <strong>First Name:</strong>
+        <p>{{ empEmployee.firstName }}</p>
+    </div>
+    <div>
+        <strong>Last Name:</strong>
+        <p>{{ empEmployee.lastName }}</p>
+    </div>
+    <div>
+        <strong>Email:</strong>
+        <p>{{ empEmployee.email }}</p>
+    </div>
+    <div>
+        <strong>Mobile:</strong>
+        <p>{{ empEmployee.mobile }}</p>
+    </div>
+    <div>
+        <strong>Salary:</strong>
+        <p>{{ empEmployee.salary }}</p>
+    </div>
+</div>

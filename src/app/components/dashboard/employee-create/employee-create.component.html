@@ -1,0 +1,46 @@
+<div class="row mb-2 mt-3">
+    <div class="col-md-12">
+        <div class="d-flex justify-content-end"> <button (click)="goBack()" class="btn btn-primary">Go back</button></div>
+    </div>
+</div>
+<div class="card p-3">
+    <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+            <label for="first name">First Name:</label>
+            <input 
+                formControlName="firstName"
+                type="text" 
+                class="form-control">
+          </div>
+          <div class="form-group mb-3">
+            <label for="last name">Last Name:</label>
+            <input 
+                formControlName="lastName"
+                type="text" 
+                class="form-control">
+          </div>
+          <div class="form-group mb-3">
+            <label for="email">Email:</label>
+            <input 
+                formControlName="email"
+                type="email" 
+                class="form-control">
+          </div>
+          <div class="form-group mb-3">
+            <label for="mobile">Mobile:</label>
+            <input 
+                formControlName="mobile"
+                type="text" 
+                class="form-control">
+          </div>
+          <div class="form-group mb-3">
+            <label for="salary">Salary:</label>
+            <input 
+                formControlName="salary"
+                type="text" 
+                class="form-control">
+          </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+</div>
